@@ -1,20 +1,36 @@
-:root {
+:root{
 
-    --verde: #103b30;
-    --verde2: #0d8a7b;
-    --bege: #efe5d6;
-    --texto: #17352d;
+    --verde:#103b30;
+    --verde2:#0d8a7b;
+
+    --bege:#efe5d6;
+    --bege2:#d7c2a5;
+
+    --texto:#17352d;
+
+    --branco:#fff;
+
+    --sombra:0 12px 35px rgba(0,0,0,.10);
+
+    --transicao:.35s ease;
+
+    --raio:30px;
+
+    --container:min(1200px,90%);
+}
+
+*,
+*::before,
+*::after{
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
 
 }
 
 
-* {
-
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
 
 
 html {
@@ -28,7 +44,9 @@ body {
 
     font-family: Poppins, sans-serif;
     color: var(--texto);
-
+    background:white;
+    overflow-x:hidden;
+    line-height:1.7;
 }
 
 
@@ -37,6 +55,7 @@ body {
 
     width: min(1200px, 90%);
     margin: auto;
+
 
 }
 
@@ -50,8 +69,9 @@ header {
 
     position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 100;
 
 }
 
@@ -63,6 +83,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 40px;
 
 }
 
@@ -72,6 +93,14 @@ header {
 
     width: 90px;
     border-radius: 50%;
+    transition:var(--transicao);
+    cursor: pointer;
+
+}
+
+.logo img:hover{
+
+    transform:scale(1.05);
 
 }
 
@@ -82,6 +111,7 @@ header {
     display: flex;
     gap: 40px;
     list-style: none;
+    align-items: center;
 
 }
 
@@ -113,7 +143,7 @@ header {
 
     font-weight: 500;
 
-    display: flex;
+    display: inline-flex;
     align-items: center;
 
     transition: .4s ease;
@@ -741,7 +771,7 @@ footer {
     
     border-radius: 30px;
     align-items: flex-start;
-    width: 380px , 217px;
+    
     
     
     height: auto;
@@ -767,12 +797,7 @@ footer {
 
 }
 
-.diagnostico {
-    
-    
-    justify-content: right;
-    padding: 30px;
-}
+
 
 
 .diagnostico img {
@@ -793,6 +818,33 @@ footer {
     cursor: pointer;
 }
 
+.equipamentos{
+    
+ border-radius: 30px;
+    width:400px;
+   
+    display: flex;
+    
+    cursor: pointer;
+}
+
+.protese{
+        
+ border-radius: 30px;
+    width:400px;
+   
+    display: flex;
+    
+    cursor: pointer;
+}
+.macbook{
+    border-radius: 30px;
+    width:400px;
+   
+    display: flex;
+    
+    cursor: pointer;
+}
 
 
 
