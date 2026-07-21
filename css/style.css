@@ -1,32 +1,32 @@
-:root{
+:root {
 
-    --verde:#103b30;
-    --verde2:#0d8a7b;
+    --verde: #103b30;
+    --verde2: #0d8a7b;
 
-    --bege:#efe5d6;
-    --bege2:#d7c2a5;
+    --bege: #efe5d6;
+    --bege2: #d7c2a5;
 
-    --texto:#17352d;
+    --texto: #17352d;
 
-    --branco:#fff;
+    --branco: #fff;
 
-    --sombra:0 12px 35px rgba(0,0,0,.10);
+    --sombra: 0 12px 35px rgba(0, 0, 0, .10);
 
-    --transicao:.35s ease;
+    --transicao: .35s ease;
 
-    --raio:30px;
+    --raio: 30px;
 
-    --container:min(1200px,90%);
+    --container: min(1200px, 90%);
 }
 
 *,
 *::before,
-*::after{
+*::after {
 
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 
-    box-sizing:border-box;
+    box-sizing: border-box;
 
 }
 
@@ -44,19 +44,16 @@ body {
 
     font-family: Poppins, sans-serif;
     color: var(--texto);
-    background:white;
-    overflow-x:hidden;
-    line-height:1.7;
+    background-color:#F8F6F1;
+    overflow-x: hidden;
+    line-height: 1.7;
 }
 
 
 
 .container {
-
-    width: min(1200px, 90%);
+    width: min(1320px, 92%);
     margin: auto;
-
-
 }
 
 
@@ -93,14 +90,14 @@ header {
 
     width: 90px;
     border-radius: 50%;
-    transition:var(--transicao);
+    transition: var(--transicao);
     cursor: pointer;
 
 }
 
-.logo img:hover{
+.logo img:hover {
 
-    transform:scale(1.05);
+    transform: scale(1.05);
 
 }
 
@@ -549,6 +546,7 @@ h1 span {
     align-items: center;
 
     gap: 80px;
+    background-color: #F8F6F1;
 
 }
 
@@ -559,6 +557,7 @@ h1 span {
     width: 430px;
 
     border-radius: 30px;
+    
 
 }
 
@@ -634,13 +633,10 @@ h1 span {
 
 
 .cards {
-
-    display: flex;
-
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-
     margin-top: 50px;
-
 }
 
 
@@ -679,22 +675,195 @@ h1 span {
     padding: 100px 0;
 
     text-align: center;
+    background-color: #103b30;
+    padding: 120px 0;
+
+
 
 }
+
+.contato p {
+    color: white
+}
+
+.contato img {
+    border-radius: 30px;
+    height: 500px;
+    width: 700px;
+
+}
+
 
 
 
 .contato h2 {
 
     font-family: "Cormorant Garamond";
-
+    color: white;
     font-size: 60px;
+
+}
+
+.mapa {
+    border-radius: 30px;
+    width: 700px;
+    height: 360px;
+    position: relative;
+}
+
+.cntt {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 2px;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background: rgba(239, 229, 214, .15);
+
+    max-width: 700px;
+    border: 2px solid #d7c2a5;
+
+}
+
+
+.btn-principal {
+
+    grid-column: 1 / -1;
+
+    justify-self: center;
+
+
+
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    font-size: 11px;
+    letter-spacing: 4px;
+
+    color: #d7c2a5;
+}
+
+
+
+.cntt p {
+    color: rgb(255, 255, 255)
+}
+
+.info-box {
+    background: #103b30;
+
+    padding: 25px;
+
+    min-height: 140px;
+
+    border-radius: 0;
+
+
 
 }
 
 
 
+.info-box i {
 
+    color: #d7c2a5;
+
+    font-size: 22px;
+
+}
+
+
+
+.info-box p {
+
+    margin-top: 20px;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, .6);
+
+}
+
+
+
+.info-box span,
+.info-box a {
+
+    display: block;
+
+    margin-top: 10px;
+
+    color: white;
+
+    text-decoration: none;
+
+    line-height: 1.7;
+
+}
+
+
+
+.info-box a:hover {
+
+    color: #d7c2a5;
+
+}
+
+
+.contato-layout {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+    max-width: 1200px;
+
+    margin: auto;
+    grid-template-columns: 420px 1fr;
+    
+    align-items: start; 
+}
+
+
+
+
+.contato img {
+
+    width: 100%;
+
+    height: 420px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    box-shadow: var(--sombra);
+
+}
+
+
+
+.contato-texto {
+
+    text-align: left;
+
+}
 
 footer {
 
@@ -709,10 +878,11 @@ footer {
 }
 
 
-.rotina{
-    
-     padding: 120px 0;
-    
+.rotina {
+
+    padding: 120px 0;
+    background-color: #F8F6F1;
+
 
 }
 
@@ -730,31 +900,25 @@ footer {
 }
 
 .bastidores {
+    display: grid;
 
-    display: flex;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
 
-    align-items: center;
-
-    gap: 40px;
-
+    gap: 20px;
 }
 
 .bastidores div {
     overflow: hidden;
-    border-radius: 30px;
+    border-radius: 25px;
 }
 
 .bastidores img {
-
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
     display: block;
-
-    transition: transform 0.7s ease;
-
+    transition: .5s;
 }
 
 .bastidores div:hover img {
@@ -763,88 +927,59 @@ footer {
 
 }
 
-
-
-
-
-.hian {
-    
-    border-radius: 30px;
-    align-items: flex-start;
-    
-    
-    
-    height: auto;
-    cursor: pointer;
-}
-
-
-
 .estetica {
-    padding: 40px;
-    
-    justify-content: right;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    /* ocupa duas linhas */
+}
+
+.diagnostico {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.protese {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.equipamentos {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.clinica {
+    grid-column: 1 / 4;
+    /* ocupa da coluna 2 até a 3 */
+    grid-row: 3;
+
+    height: 650px;
+}
+
+.macbook {
+    grid-column: 3;
+    grid-row: 2;
 }
 
 
-.estetica img {
-
-    width: 450px;
-
-    border-radius: 30px;
-
-    display: block;
-
-}
 
 
 
 
-.diagnostico img {
 
-    width: 400px;
 
-    border-radius: 30px;
 
-    display: block;
-}
 
-.diag {
-    border-radius: 30px;
-    width:400px;
-   
-    display: flex;
-    
-    cursor: pointer;
-}
 
-.equipamentos{
-    
- border-radius: 30px;
-    width:400px;
-   
-    display: flex;
-    
-    cursor: pointer;
-}
 
-.protese{
-        
- border-radius: 30px;
-    width:400px;
-   
-    display: flex;
-    
-    cursor: pointer;
-}
-.macbook{
-    border-radius: 30px;
-    width:400px;
-   
-    display: flex;
-    
-    cursor: pointer;
-}
+
+
+
+
+
+
+
+
 
 
 
@@ -864,6 +999,7 @@ footer {
     .sobre {
 
         flex-direction: column;
+       
 
     }
 
