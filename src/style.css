@@ -963,76 +963,147 @@ footer {
 
 
 
+@media (max-width: 768px) {
 
+    /* HEADER */
 
+    .nav{
+        height: 80px;
+        justify-content: center;
+    }
 
+    .nav ul,
+    .btn-nav{
+        display:none;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media(max-width:900px) {
-
-
-    .nav ul {
-
-        display: none;
-
+    .logo img{
+        width:70px;
     }
 
 
-    .hero-content,
-    .sobre {
+    /* HERO */
 
-        flex-direction: column;
-       
+    .hero{
+        padding:120px 0 60px;
+        min-height:auto;
+    }
 
+    .hero-content{
+        flex-direction:column;
+        gap:50px;
+        text-align:center;
+        padding-top:0;
+    }
+
+    .texto{
+        width:100%;
+    }
+
+    .local{
+        justify-content:center;
+    }
+
+    h1{
+        font-size:48px;
+    }
+
+    .texto p{
+        max-width:100%;
+    }
+
+    .botoes{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .foto{
+        width:100%;
+        max-width:350px;
+    }
+
+    .balao{
+        left:10px;
+        bottom:10px;
     }
 
 
+    /* SOBRE */
 
-    .texto {
+    .sobre{
+        flex-direction:column;
+        text-align:center;
+        padding:80px 0;
+    }
 
-        width: 100%;
+    .sobre-img img{
+        width:100%;
+    }
 
+    .sobre-text h2{
+        font-size:42px;
+    }
+
+    .numeros{
+        justify-content:center;
+        gap:25px;
+        flex-wrap:wrap;
     }
 
 
+    /* SERVIÇOS */
 
-    h1 {
+    .servicos h2{
+        font-size:42px;
+    }
 
-        font-size: 55px;
-
+    .cards{
+        grid-template-columns:1fr;
     }
 
 
-    .foto {
+    /* ROTINA */
 
-        width: 100%;
+    .rotina h2{
+        font-size:42px;
+        text-align:center;
+    }
 
+    .bastidores{
+        grid-template-columns:1fr;
+        grid-template-rows:auto;
+    }
+
+    .bastidores div{
+        grid-column:auto !important;
+        grid-row:auto !important;
+        height:250px;
     }
 
 
-    .cards {
+    /* CONTATO */
 
-        flex-direction: column;
-
+    .contato-layout{
+        grid-template-columns:1fr;
+        gap:40px;
     }
 
+    .contato-texto{
+        text-align:center;
+    }
 
+    .contato h2{
+        font-size:42px;
+    }
+
+    .cntt{
+        grid-template-columns:1fr;
+    }
+
+    .contato img,
+    .mapa{
+        width:100%;
+        height:300px;
+    }
 
 }
