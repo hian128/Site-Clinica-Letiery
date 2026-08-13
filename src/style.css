@@ -642,26 +642,27 @@ h1 span {
 
 
 .card {
-
     background: white;
-
     padding: 35px;
-
     border-radius: 25px;
 
-    flex: 1;
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
 
-    transition: .3s;
-
+    box-shadow: 0 5px 20px rgba(16, 59, 48, .05);
 }
 
 
 
 .card:hover {
+    transform: translateY(-12px);
 
-    transform: translateY(-10px);
-
+    box-shadow:
+        0 20px 40px rgba(16, 59, 48, .12);
 }
+
+
 
 
 
@@ -730,15 +731,7 @@ h1 span {
 }
 
 
-.btn-principal {
 
-    grid-column: 1 / -1;
-
-    justify-self: center;
-
-
-
-}
 
 .text {
     display: flex;
@@ -847,7 +840,7 @@ h1 span {
 
     width: 100%;
 
-    height: 420px;
+    height: 364px;
 
     object-fit: cover;
 
@@ -948,19 +941,173 @@ footer {
     grid-row: 2;
 }
 
-.clinica {
-    grid-column: 1 / 4;
-    /* ocupa da coluna 2 até a 3 */
-    grid-row: 3;
-
-    height: 650px;
-}
-
 .macbook {
     grid-column: 3;
     grid-row: 2;
 }
 
+/* =========================
+   CARDS DOS TRATAMENTOS
+========================= */
+
+.cards .card:nth-child(1) {
+    transition-delay: .1s;
+}
+
+.cards .card:nth-child(2) {
+    transition-delay: .2s;
+}
+
+.cards .card:nth-child(3) {
+    transition-delay: .3s;
+}
+
+.cards .card:nth-child(4) {
+    transition-delay: .4s;
+}
+
+.cards .card:nth-child(5) {
+    transition-delay: .5s;
+}
+
+.cards .card:nth-child(6) {
+    transition-delay: .6s;
+}
+
+/*=========================
+   ANIMAÇÃO HERO
+========================= */
+
+.hero .texto {
+    animation: entrarEsquerda 1s ease-out both;
+}
+
+.hero .foto {
+    animation: entrarDireita 1.1s ease-out both;
+}
+
+@keyframes entrarEsquerda {
+
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes entrarDireita {
+
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =========================
+   ANIMAÇÃO AO ROLAR
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* Entrada pela esquerda */
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* Entrada pela direita */
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* Zoom */
+
+.reveal-zoom {
+    opacity: 0;
+    transform: scale(0.92);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal-zoom.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* =========================
+   ANIMAÇÃO DOS CARDS
+========================= */
+
+.cards .card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.cards .card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.cards .card:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.cards .card:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.cards .card:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+.cards .card:nth-child(6) {
+    transition-delay: 0.6s;
+}
 
 
 @media (max-width: 768px) {
@@ -1106,4 +1253,22 @@ footer {
         height:300px;
     }
 
+/* =========================
+   ANIMAÇÕES DE SCROLL
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
 }
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+}
+

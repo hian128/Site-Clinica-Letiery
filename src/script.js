@@ -1,17 +1,50 @@
-// Rolagem suave
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
+// ===============================
+// ROLAGEM SUAVE
+// ===============================
 
-        link.addEventListener('click', function(e){
+document.querySelectorAll('a[href^="#"]').forEach(link => {
 
-            e.preventDefault();
+    link.addEventListener('click', function(e) {
 
-            document.querySelector(this.getAttribute('href'))
-            .scrollIntoView({
+        e.preventDefault();
 
-                behavior:'smooth'
+        const destino = document.querySelector(this.getAttribute('href'));
 
+        if (destino) {
+            destino.scrollIntoView({
+                behavior: 'smooth'
             });
-
-        });
+        }
 
     });
+
+});
+
+
+// ===============================
+// ANIMAÇÕES AO ROLAR
+// ===============================
+
+const elementos = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver((entradas) => {
+
+    entradas.forEach((entrada) => {
+
+        if (entrada.isIntersecting) {
+
+            entrada.target.classList.add('active');
+
+        }
+
+    });
+
+}, {
+    threshold: 0.3,
+    rootMargin: "0px 0px -80px 0px"
+});
+
+
+elementos.forEach((elemento) => {
+    observer.observe(elemento);
+});
